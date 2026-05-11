@@ -10,8 +10,8 @@ provider "aws" {
 
 resource aws_key_pair my_key_pair {
 
-key_name="terra-automate-key-josh"
-public_key=file("terra-automate-key.pub")
+key_name="terra-auto-key-josh"
+public_key=file("terra-auto-key.pub")
 } 
 
 # VPC Default

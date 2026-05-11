@@ -2,7 +2,7 @@
  
 variable "instances" {
 
-    description = "Map of instncesnames to AMI IDs, SSh users, and OS family"
+    description = "Map of instnces names to AMI IDs, SSh users, and OS family"
 
     type = map(object({
         ami = string
@@ -36,26 +36,3 @@ variable "instances" {
       }
     }
 }
-
-
-# variable "instance_type" {
-#   description = "Instance type for the EC2 instance"
-#   type        = string
-#   default     = "t2.micro"
-
-#   validation {
-#     condition     = contains(["t2.micro", "t2.small", "t2.medium", "t3.micro", "t3.small", "t3.medium"], var.instance_type)
-#     error_message = "Instance type must be one of: t2.micro, t2.small, t2.medium, t3.micro, t3.small, t3.medium."
-#   }
-# }
-
-# variable "my_environment" {
-#   description = "Deployment environment (dev, staging, prd)"
-#   type        = string
-#   default     = "dev"
-
-#   validation {
-#     condition     = contains(["dev", "staging", "prd"], var.my_environment)
-#     error_message = "Environment must be one of: dev, staging, prd."
-#   }
-# }
